@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-art-bg: #F9F7F2;
+  --color-art-text: #1A1A1A;
+  --color-art-accent: #C04000;
+  --color-art-secondary: #4A4A4A;
+  --color-art-paper: #FFFFFF;
+}
+
+body {
+  background-color: var(--color-art-bg);
+  color: var(--color-art-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-art-text text-art-bg font-medium rounded-lg hover:bg-art-accent transition-colors duration-300 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-white border border-art-text/20 text-art-text font-medium rounded-lg hover:bg-art-bg transition-colors duration-300 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.card {
+  @apply bg-white p-6 rounded-xl shadow-sm border border-art-text/5;
+}
